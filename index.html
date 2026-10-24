@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160d25">
+<title>Parneet Ji.exe ♡ — Parth's little universe</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--bg:#120b1d;--panel:#21142f;--panel2:#2b1b3a;--pink:#ff8eae;--pink2:#ffc2d4;--lav:#c6a8ff;--cream:#fff4f8;--muted:#c7b7d2;--line:#ffffff20}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 0%,#54264c88,transparent 45%),radial-gradient(ellipse at 95% 35%,#38215e88,transparent 40%),radial-gradient(ellipse at 50% 100%,#30172c66,transparent 50%)}
+button{font:inherit;cursor:pointer;border:0;transition:transform .2s,filter .2s}button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px clamp(16px,5vw,70px);background:#120b1de8;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;letter-spacing:.4px}.logo b{color:var(--pink)}
+.navlinks{display:flex;gap:18px;font-size:.86rem;color:var(--muted)}.navlinks a:hover{color:var(--pink2)}
+.soundbtn,.pill{border:1px solid #ffffff2b;border-radius:99px;background:#ffffff0d;color:var(--cream);padding:10px 15px;font-size:.85rem}
+.hero{min-height:calc(100vh - 64px);display:grid;align-items:center;position:relative;padding:70px clamp(20px,8vw,120px) 90px;overflow:hidden}
+.hero-wrap{max-width:950px;position:relative;z-index:2}
+.kicker{font-size:.76rem;letter-spacing:3px;text-transform:uppercase;color:var(--pink2);font-weight:700}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+h1{font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.06em;margin:25px 0}
+h1 span{display:block;color:var(--pink);font-style:italic;font-weight:500}
+.hero p{font-size:clamp(1.05rem,2.5vw,1.3rem);line-height:1.8;color:#e2d6e8;max-width:610px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{border-radius:99px;padding:14px 22px;font-weight:700}.btn-main{background:linear-gradient(100deg,var(--pink),#c6a8ff);color:#24132c;box-shadow:0 8px 35px #ff8eae30}.btn-soft{background:#ffffff0c;border:1px solid var(--line);color:var(--cream)}
+.orbit{position:absolute;width:min(46vw,510px);aspect-ratio:1;right:6%;top:17%;border:1px solid #ffb3d12c;border-radius:50%;animation:spin 32s linear infinite}
+.orbit:before,.orbit:after{content:"♡";position:absolute;font-size:34px;color:var(--pink);background:var(--bg);padding:5px}.orbit:before{top:9%;left:12%}.orbit:after{right:6%;bottom:23%;color:var(--lav)}
+.orb-core{position:absolute;right:13%;top:27%;width:min(28vw,300px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#ffb4cd,#9e5b9d 45%,#37204b 78%);box-shadow:0 0 90px #ff83b32b;font-size:clamp(4rem,10vw,8rem);animation:bob 5s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes bob{50%{transform:translateY(-13px) rotate(3deg)}}
+.section{padding:90px clamp(18px,7vw,100px);max-width:1300px;margin:auto}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+.eyebrow{color:var(--pink);font-size:.75rem;text-transform:uppercase;letter-spacing:2.5px;font-weight:800}
+h2{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.05;margin:10px 0 0;letter-spacing:-.035em}
+.intro{color:var(--muted);line-height:1.8;max-width:650px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:15px}
+.tile{background:linear-gradient(145deg,#2b1b3a,#1c1229);border:1px solid var(--line);border-radius:25px;padding:25px;position:relative;overflow:hidden}
+.tile:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:#ff8eae0c;right:-50px;bottom:-60px}
+.tile:nth-child(1){grid-column:span 5}.tile:nth-child(2){grid-column:span 7}.tile:nth-child(3){grid-column:span 7}.tile:nth-child(4){grid-column:span 5}
+.tile .icon{font-size:2rem}.tile h3{font-size:1.55rem;margin:14px 0 8px}.tile p{color:var(--muted);line-height:1.75;margin:0}
+.counter{font-size:3rem;color:var(--pink);font-family:'Playfair Display',serif}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.memory{padding:23px;border-radius:22px;background:#ffffff08;border:1px solid var(--line)}
+.memory .num{font-size:.75rem;color:var(--pink);letter-spacing:2px}.memory h3{font-size:1.35rem;margin:10px 0}.memory p{color:var(--muted);line-height:1.7;margin:0}
+.letterbox{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px;align-items:stretch}
+.envelope{min-height:310px;border-radius:28px;background:linear-gradient(145deg,#ffabc4,#b88bff);color:#28132d;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;cursor:pointer;position:relative;overflow:hidden}
+.envelope .big{font-size:5rem;transition:transform .4s}.envelope:hover .big{transform:rotate(-8deg) scale(1.08)}
+.envelope h3{font-size:2rem;margin:8px}.envelope p{max-width:260px;line-height:1.6}
+.letter{background:#fff7fa;color:#39213c;border-radius:28px;padding:clamp(24px,4vw,42px);line-height:1.9;display:none;animation:appear .5s ease}.letter.open{display:block}.letter strong{color:#a13d73}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.media-panel{border-radius:30px;padding:clamp(18px,4vw,36px);background:linear-gradient(135deg,#291a3a,#191126);border:1px solid var(--line)}
+.media-top{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.media-top p{color:var(--muted);margin:5px 0}
+.media-controls{display:flex;gap:10px;flex-wrap:wrap}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.video-frame{position:relative;border-radius:20px;overflow:hidden;background:#0b0710;border:1px solid var(--line)}
+video{width:100%;display:block;max-height:500px;aspect-ratio:4/3;object-fit:contain;background:#08060d}
+.video-label{padding:12px 15px;color:var(--muted);font-size:.9rem}
+.musicbox{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:20px;background:linear-gradient(120deg,#38203f,#21142f);border:1px solid var(--line);border-radius:26px;padding:22px}
+.album{width:110px;aspect-ratio:1;border-radius:20px;display:grid;place-items:center;background:linear-gradient(140deg,#ff8eae,#9c75e7);font-size:3.4rem;box-shadow:0 8px 35px #ff8eae25}
+.musicbox p{color:var(--muted);margin:5px 0 14px}.musicbox audio{width:100%;height:42px}
+.note-small{font-size:.83rem;color:var(--muted);line-height:1.65;margin-top:10px}
+.question{border-radius:32px;padding:clamp(25px,6vw,65px);text-align:center;background:radial-gradient(circle at 10% 0%,#69304c,#2b1a3e 45%,#1b1228);border:1px solid #ffffff22}
+.question h2{max-width:800px;margin:14px auto}.question .intro{margin:18px auto}
+.answers{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.answer{border-radius:99px;padding:14px 20px;font-weight:700}.yes{background:var(--pink);color:#2c152b}.maybe{background:#ffffff12;color:white;border:1px solid var(--line)}.no{background:transparent;color:#ddcce5;border:1px solid #ffffff24}
+#reply{min-height:58px;max-width:650px;margin:22px auto 0;line-height:1.8;color:var(--pink2);font-weight:600}
+footer{text-align:center;padding:35px 20px 50px;color:#9d8aa9;border-top:1px solid var(--line);font-size:.9rem}
+.floating-hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+.float-heart{position:absolute;bottom:-40px;animation:rise linear forwards;opacity:.8}
+@keyframes rise{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:760px){.navlinks{display:none}.hero{min-height:80vh;padding-top:65px}.orbit{right:-15%;top:8%;width:65vw;opacity:.6}.orb-core{right:4%;top:18%;width:35vw;opacity:.7}.hero-wrap{padding-top:140px}.tile:nth-child(n){grid-column:span 12}.timeline{grid-template-columns:1fr}.letterbox{grid-template-columns:1fr}.envelope{min-height:240px}.video-grid{grid-template-columns:1fr}.section{padding-top:65px;padding-bottom:65px}.section-head{display:block}.musicbox{grid-template-columns:75px 1fr}.album{width:75px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<audio id="bgMusic" loop preload="auto" style="display:none" aria-hidden="true"><source src="assets/our-song.mp3" type="audio/mpeg"></audio>
+
+<div class="floating-hearts" id="hearts"></div>
+<nav class="nav">
+  <a class="logo" href="#top">P<span style="color:var(--pink)">♡</span>P <b>· Parth x Parneet Ji</b></a>
+  <div class="navlinks"><a href="#things">The lore</a><a href="#letter">Open letter</a><a href="#memories">Our videos</a><a href="#question">One question</a></div>
+  <button class="soundbtn" id="soundToggle" type="button">♫ Music</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="orbit"></div><div class="orb-core">♡</div>
+  <div class="hero-wrap">
+    <div class="kicker">a very unserious website for a very special girl</div>
+    <h1>Parneet <span>Ji.</span></h1>
+    <p>Oye clever girl 😭💗 welcome to your own little corner of the internet. Is website ko banane mein coding se zyada overthinking lagi hai, bas bata raha hoon.</p>
+    <div class="cta"><button class="btn btn-main" onclick="document.querySelector('#things').scrollIntoView({behavior:'smooth'})">Enter my delulu universe ✨</button><button class="btn btn-soft" onclick="openLetter()">Pehle letter kholun? 💌</button></div>
+  </div>
+</header>
+
+<section class="section reveal" id="things">
+  <div class="section-head"><div><div class="eyebrow">the Parneet lore</div><h2>Why you, madam ji?</h2></div><p class="intro">Main sirf ek “pretty girl” wali list nahi banaunga. Tumhari personality bhi toh poora plot hai.</p></div>
+  <div class="bento">
+    <article class="tile"><div class="icon">🧠</div><h3>Smart & dangerously clever</h3><p>Tumhari dimaag wali baat alag hai. Kabhi-kabhi lagta hai tumse argue karne se pehle terms & conditions padhni chahiye. 😭</p></article>
+    <article class="tile"><div class="icon">🪄</div><h3>That unmistakable vibe</h3><p>Tumse baat hoti hai toh normal si conversation bhi yaad reh jaati hai. Koi grand reason nahi — bas tum ho, and that matters to me.</p></article>
+    <article class="tile"><div class="icon">🎬</div><h3>Little moments > big gestures</h3><p>Random talks, silly moments, shared videos — main in cheezon ko genuinely cherish karta hoon. Har memory ko dramatic movie scene banana zaroori nahi… but maine website bana di, so oops.</p></article>
+    <article class="tile"><div class="icon">🌷</div><h3>Apni marzi ki queen</h3><p>Mujhe tumhari apni soch aur choices pasand hain. Isliye tumhari feelings ka answer bhi tumhara hi hoga — no pressure from my side.</p></article>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="section-head"><div><div class="eyebrow">mini stats, maximum feelings</div><h2>Parth.exe has stopped functioning</h2></div></div>
+  <div class="bento">
+    <div class="tile"><div class="counter">01</div><h3>One girl on my mind</h3><p>Naam toh tumhe pata hi hai, Parneet ji. 🙄💗</p></div>
+    <div class="tile"><div class="counter">∞</div><h3>Things I could say</h3><p>But real life mein tum saamne aa jao toh sentence formation hi chali jaati hai.</p></div>
+    <div class="tile"><div class="counter">100%</div><h3>Respect, always</h3><p>Crush ho ya na ho, tumhari comfort aur choice important hai. No emotional blackmail, pakka.</p></div>
+    <div class="tile"><div class="counter">🎁</div><h3>Side quest unlocked</h3><p>Bangles + sweets are ready. Bas gesture hai, koi hidden contract nahi hai, madam.</p></div>
+  </div>
+</section>
+
+<section class="section reveal" id="letter">
+  <div class="section-head"><div><div class="eyebrow">classified: dil ki baat</div><h2>A letter for Parneet Ji</h2></div><p class="intro">Tap the envelope. Haan haan, itna suspense bhi main hi create karunga. 💌</p></div>
+  <div class="letterbox">
+    <button class="envelope" id="envelope" onclick="openLetter()" aria-label="Open Parth's letter"><div class="big">💌</div><h3>For your eyes only</h3><p>Tap to open · written by one slightly nervous Parth</p><span>↗ OPEN LETTER</span></button>
+    <article class="letter" id="letterText">
+      <p>Parneet ji, suno na. 🥹</p>
+      <p>Idiot, samajh ni aa raha kya? 😭 <strong>Parth tumhe genuinely pasand karta hai, bishhhh.</strong> Tumhari smartness, tumhari cleverness, tumhari vibe — aur woh chhoti-chhoti baatein jo shayad tum khud notice bhi nahi karti.</p>
+      <p>Ek baat aur: maine ek baar tumhari disrespect ki thi, and I’m genuinely sorry. Woh sahi nahi tha. Tum deserve karti ho ki tumse respect se baat ho, even when things are awkward. I’ll own that instead of making excuses.</p>
+      <p>Main tumhe “haan” bolne ke liye convince ya pressure nahi karna chahta. Mujhe apni feelings honestly batani thi. Tumne kaha hai tumhare feelings nahi hain — I hear you, and I respect that. Tumhe meri feelings ka jawab dena ya unhe return karna zaroori nahi.</p>
+      <p>And yes, <strong>bangles aur sweets</strong> tumhare liye laaye hain 🪷🍬. Bas ek little gift, no strings attached. Agar tum comfortable ho toh de dunga.</p>
+      <p>— Parth, jo thoda filmy hai, thoda pagal hai, but tumhari respect karna seekh raha hai. ♡</p>
+      <button class="btn btn-main" onclick="document.querySelector('#memories').scrollIntoView({behavior:'smooth'})">Ab memories dekho →</button>
+    </article>
+  </div>
+</section>
+
+<section class="section reveal" id="memories">
+  <div class="section-head"><div><div class="eyebrow">the little archive</div><h2>Press once. Both videos. 🎞️</h2></div><p class="intro">Dono videos ko ek saath play/pause karne ke liye single button. Individual controls bhi neeche hain.</p></div>
+  <div class="media-panel">
+    <div class="media-top"><div><h3 style="font-size:1.6rem;margin:0">Our little memory lane</h3><p>Two clips · one shared play button</p></div><div class="media-controls"><button class="btn btn-main" id="playBoth">▶ Play both videos</button><button class="btn btn-soft" id="pauseBoth">Ⅱ Pause both</button></div></div>
+    <div class="video-grid">
+      <div class="video-frame"><video muted id="video1" controls playsinline preload="metadata"><source src="assets/our-video-1.mp4" type="video/mp4">Your browser can't play this video.</video><div class="video-label">Memory 01 · little moments ♡</div></div>
+      <div class="video-frame"><video muted id="video2" controls playsinline preload="metadata"><source src="assets/our-video-2.mp4" type="video/mp4">Your browser can't play this video.</video><div class="video-label">Memory 02 · another little moment ✨</div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section reveal" id="question">
+  <div class="question">
+    <div class="eyebrow">no pressure · honest answer only</div>
+    <h2>Parneet ji, kabhi mere saath date pe chalogi?</h2>
+    <p class="intro">Coffee, campus walk, sweets — jo tumhe comfortable lage. Aur agar tum same feel nahi karti, that’s okay too. You can be honest with me; you don’t owe me a yes.</p>
+    <div class="answers"><button class="answer yes" onclick="answer('yes')">Okay, let’s plan it 🥹</button><button class="answer maybe" onclick="answer('maybe')">Mujhe time chahiye 🌷</button><button class="answer no" onclick="answer('no')">I don’t feel that way 🤍</button></div>
+    <div id="reply" aria-live="polite"></div>
+  </div>
+</section>
+<footer>Made with an embarrassing amount of effort by Parth ♡<br><span style="display:inline-block;margin-top:9px">Parneet Ji, your answer is yours. Always.</span></footer>
+
+<script>
+const song=document.getElementById('song');
+const soundToggle=document.getElementById('soundToggle');
+let soundStarted=false;
+async function startSound(){
+  try{song.volume=.65;await song.play();soundStarted=true;soundToggle.textContent='♫ Music is on';}
+  catch(e){soundToggle.textContent='♫ Tap to play music';}
+}
+window.addEventListener('load',()=>{startSound();});
+soundToggle.addEventListener('click',async()=>{
+  if(song.paused){await startSound();}else{song.pause();soundToggle.textContent='♫ Turn sound on';}
+});
+// Sound-on autoplay may be blocked by browser policy; the first user interaction retries it.
+document.addEventListener('pointerdown',()=>{if(!soundStarted && song.paused)startSound();},{once:true});
+const v1=document.getElementById('video1'),v2=document.getElementById('video2');
+document.getElementById('playBoth').addEventListener('click',async()=>{
+  const results=await Promise.allSettled([v1.play(),v2.play()]);
+  document.getElementById('playBoth').textContent=results.every(x=>x.status==='fulfilled')?'▶ Both are playing':'▶ Tap each video to allow playback';
+});
+document.getElementById('pauseBoth').addEventListener('click',()=>{v1.pause();v2.pause();document.getElementById('playBoth').textContent='▶ Play both videos';});
+function openLetter(){document.getElementById('letterText').classList.add('open');document.getElementById('envelope').style.display='none';document.getElementById('letterText').scrollIntoView({behavior:'smooth',block:'center'});heartsBurst();}
+function answer(type){const r=document.getElementById('reply');if(type==='yes'){r.textContent='Acha ji… 🥹💗 Agar sach mein tum comfortable ho, toh tum day/place choose karna. No grand expectations — bas ek nice time together.';heartsBurst();}else if(type==='maybe'){r.textContent='Bilkul, take your time 🌷 Tumhe jaldi decision lene ki zaroorat nahi. Jab comfortable ho tabhi baat karenge.';}else{r.textContent='Thank you honestly batane ke liye 🤍 I respect that. No pressure, no guilt — main tumhari choice respect karunga.';}}
+function heartsBurst(){const wrap=document.getElementById('hearts');for(let i=0;i<18;i++){const h=document.createElement('span');h.className='float-heart';h.textContent=['♡','♥','✦','💗'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.fontSize=(14+Math.random()*22)+'px';h.style.animationDuration=(3+Math.random()*3)+'s';wrap.appendChild(h);setTimeout(()=>h.remove(),6200);}}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+<script>
+(() => {
+  const music = document.getElementById('bgMusic');
+  const toggle = document.getElementById('soundToggle');
+
+  // Videos remain muted, including if another script tries to play them.
+  document.querySelectorAll('video').forEach(video => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.addEventListener('volumechange', () => {
+      if (!video.muted) video.muted = true;
+    });
+  });
+
+  async function startMusic() {
+    if (!music) return;
+    try {
+      await music.play();
+      if (toggle) {
+        toggle.textContent = '♫ Pause music';
+        toggle.setAttribute('aria-label', 'Pause background music');
+      }
+    } catch (_) {
+      // Browsers may block autoplay until the visitor interacts with the page.
+    }
+  }
+
+  if (toggle) {
+    toggle.addEventListener('click', async () => {
+      if (music.paused) {
+        await startMusic();
+      } else {
+        music.pause();
+        toggle.textContent = '♫ Play music';
+        toggle.setAttribute('aria-label', 'Play background music');
+      }
+    });
+  }
+
+  window.addEventListener('load', startMusic);
+  ['pointerdown', 'keydown', 'touchstart'].forEach(eventName => {
+    document.addEventListener(eventName, () => {
+      if (music && music.paused && !window.__musicManuallyPaused) startMusic();
+    }, { once: true, passive: true });
+  });
+  if (music) {
+    music.addEventListener('pause', () => {
+      if (toggle) toggle.textContent = '♫ Play music';
+    });
+    music.addEventListener('play', () => {
+      if (toggle) toggle.textContent = '♫ Pause music';
+    });
+  }
+})();
+</script>
+
+
+<section class="section reveal" id="cumine-note">
+  <div class="card" style="max-width:780px;margin:0 auto;text-align:center;padding:clamp(24px,5vw,48px);">
+    <p class="eyebrow">ONE VERY IMPORTANT ANNOUNCEMENT 💌</p>
+    <h2 style="margin-bottom:18px;">I want to call you <span class="accent">“Cumine”</span> 🫶</h2>
+    <p style="font-size:clamp(1.05rem,2.2vw,1.35rem);line-height:1.75;">
+      Take away <strong>“cu”</strong> and it becomes <strong>“mine”</strong>. Yes, I made that up just for you. 😭💗
+    </p>
+    <p style="font-size:clamp(1rem,2vw,1.2rem);line-height:1.75;margin-top:16px;">
+      And this is an order—no excuses! 😂<br>
+      Forget your crush for a second… <strong>I’m right here.</strong> 💌
+    </p>
+    <p style="opacity:.78;font-size:.95rem;margin-top:18px;">(Okay, not a real order. Just me being dramatic because you’re special. ❤️)</p>
+  </div>
+</section>
+
+</body>
+</html>
